@@ -1,0 +1,6 @@
+dnspython
+ipwhois
+httpx[http2]
+bs4
+pyOpenSSL
+dotenv
