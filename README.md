@@ -26,3 +26,9 @@ pip install pyOpenSSL
 
 pip install dotenv
 
+
+
+#### To install all the packages required
+
+pip install -r requirements.txt
+
