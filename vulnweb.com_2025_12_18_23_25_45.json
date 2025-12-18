@@ -1,0 +1,170 @@
+[
+  {
+    "domain": "vulnweb.com",
+    "ip": [
+      "44.228.249.3"
+    ],
+    "http": [
+      200,
+      null,
+      "nginx/1.19.0",
+      4018
+    ],
+    "https": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cert": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "domain": "testasp.vulnweb.com",
+    "ip": [
+      "44.238.29.244"
+    ],
+    "http": [
+      200,
+      null,
+      "Microsoft-IIS/8.5",
+      3539
+    ],
+    "https": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cert": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "domain": "testphp.vulnweb.com",
+    "ip": [
+      "44.228.249.3"
+    ],
+    "http": [
+      200,
+      null,
+      "nginx/1.19.0",
+      4958
+    ],
+    "https": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cert": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "domain": "www.vulnweb.com",
+    "ip": [
+      "44.228.249.3"
+    ],
+    "http": [
+      200,
+      null,
+      "nginx/1.19.0",
+      4018
+    ],
+    "https": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cert": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "domain": "testhtml5.vulnweb.com",
+    "ip": [
+      "44.228.249.3"
+    ],
+    "http": [
+      200,
+      null,
+      "nginx/1.19.0",
+      6940
+    ],
+    "https": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cert": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "domain": "rest.vulnweb.com",
+    "ip": [
+      "18.215.71.186"
+    ],
+    "http": [
+      200,
+      null,
+      "Apache/2.4.25 (Debian)",
+      3556
+    ],
+    "https": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cert": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "domain": "testaspnet.vulnweb.com",
+    "ip": [
+      "44.238.29.244"
+    ],
+    "http": [
+      200,
+      null,
+      "Microsoft-IIS/8.5",
+      14126
+    ],
+    "https": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cert": [
+      null,
+      null,
+      null,
+      null
+    ]
+  }
+]

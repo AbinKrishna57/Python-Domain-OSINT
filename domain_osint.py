@@ -3,7 +3,6 @@ import whois
 import socket
 from ipwhois import IPWhois
 import subprocess
-import re
 
 def get_dns_records(domain):
   record_types=["A", "MX", "NS", "TXT"]
@@ -60,7 +59,7 @@ def find_subdomains_knockpy(domain):
     result=subprocess.run(
       [
         "python",
-        "C:\\Users\\Abin Krishna\\Documents\\Codes\\DNS OSINT\\knock\\knockpy.py",
+        "knock\\knock\\knockpy.py",
         "-d", domain,
         "--recon",
         "--silent"
@@ -112,7 +111,7 @@ def domain_osint(domain):
     for sub in subdomains:
       print(f" - {sub}")
   else:
-    print("\nNo subdomains discovered")
+    pass
 
 
 if __name__=="__main__":
