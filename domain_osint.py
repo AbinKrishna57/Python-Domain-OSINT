@@ -2,6 +2,8 @@ import dns.resolver
 import whois
 import socket
 from ipwhois import IPWhois
+import subprocess
+import re
 
 def get_dns_records(domain):
   record_types=["A", "MX", "NS", "TXT"]
@@ -51,6 +53,39 @@ def get_ip_info(domain):
     return{"error": str(e)}
 
 
+def find_subdomains_knockpy(domain):
+  try:
+    print(f"\nRunning Knockpy for subdomain enumeration on: {domain}\n")
+
+    result=subprocess.run(
+      [
+        "python",
+        "C:\\Users\\Abin Krishna\\Documents\\Codes\\DNS OSINT\\knock\\knockpy.py",
+        "-d", domain,
+        "--recon",
+        "--silent"
+      ],
+      capture_output=True,
+      text=True,
+      timeout=300
+    )
+
+    # Print Knockpy output directly
+    print("Knockpy Output:")
+    print(result.stdout)
+
+    # Print errors if any
+    if result.stderr:
+      print("Knockpy Errors:")
+      print(result.stderr)
+
+  except subprocess.TimeoutExpired:
+    print("Knockpy timed out")
+
+  except Exception as e:
+    print(f"Knockpy error: {e}")
+
+
 def domain_osint(domain):
   print(f"\nOSINT Report for: {domain}")
   print("=" * 50)
@@ -69,6 +104,15 @@ def domain_osint(domain):
   ip_info=get_ip_info(domain)
   for key, value in ip_info.items():
     print(f"{key}: {value}")
+
+  subdomains=find_subdomains_knockpy(domain)
+
+  if subdomains:
+    print("\nDiscovered Subdomains")
+    for sub in subdomains:
+      print(f" - {sub}")
+  else:
+    print("\nNo subdomains discovered")
 
 
 if __name__=="__main__":
